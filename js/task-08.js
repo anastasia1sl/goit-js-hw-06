@@ -9,13 +9,11 @@ function onFormSubmit(event) {
   const password = formElement.elements.password.value;
 
   if (email === '' || password === '') {
-    alert('All fields should be filled in');
+    return alert('All fields should be filled in');
   }
 
   const formData = { email, password };
   console.log(formData);
 
-  // or -->  const formData = new FormData(event.currentTarget);
-  //   console.log(formData);
   event.currentTarget.reset();
 }
